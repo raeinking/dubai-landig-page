@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Rayan j.mohammadameen">
+
+    <title> The Heart of Europe Dubai - Luxury Island Living </title>
+    
+    <link href="assets/css/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/flaticon.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="assets/css/owl.theme.css" rel="stylesheet">
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <link href="assets/css/slick-theme.css" rel="stylesheet">
+    <link href="assets/css/swiper.min.css" rel="stylesheet">
+    <link href="assets/css/owl.transitions.css" rel="stylesheet">
+    <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script>
+            function getbrochure(event) {
+    event.preventDefault();
+    console.log(event)
+    
+    const form = document.querySelector('.contacts_form');
+    const formData = new FormData(form);
+
+    // Check if any of the form fields are empty
+    const isFormValid = Array.from(formData.values()).every(value => value.trim() !== '');
+
+    if (!isFormValid) {
+        alert('Please fill in all the required fields.');
+        return;
+    }
+
+    // If the form is valid, open the URL in a new window
+    window.open('https://luxury-heart-of-europe-dubai.com/heart-fo-europe.pdf', '_blank');
+
+    const requestData = {};
+    for (let [key, value] of formData.entries()) {
+        requestData[key] = value;
+    }
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://node-email-sendersss.glitch.me/heartofdubaipdf');
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify(requestData));
+}
+
+
+
+
+
+        function contuctus(event) {
+            event.preventDefault(); // Prevent the form from submitting by default
+            alert('Thank you for your form submission. We will respond to you shortly.');
+    
+            const form = document.querySelector('.contacts_form');
+            const formData = new FormData(form);
+    
+            const requestData = {};
+            for (let [key, value] of formData.entries()) {
+                requestData[key] = value;
+            }
+    
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', 'https://node-email-sendersss.glitch.me/heartofdubai');
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.send(JSON.stringify(requestData));
+        }
+
+
+
+    </script>
+    
+
+    
+</head>
+
+<body>
+
+    <!-- start page-wrapper -->
+    <div class="page-wrapper">
+
+        <!-- start preloader -->
+        <div class="preloader">
+            <div class="lds-ellipsis">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <!-- end preloader -->
+
+        <!-- start of hero -->
+        <section class="hero-slider hero-style-2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide-inner slide-bg-image" data-background="./Heart-Of-Europe-dark.jpg">
+                            <div class="container herocostmize">
+                                <div>
+                                    <div data-swiper-parallax="300" class="slide-title">
+                                        <h2><span>The Heart of Europe</span> <br>Island Paradise</h2>
+                                    </div>
+                                    <div data-swiper-parallax="400" class="slide-text">
+                                        <p>Explore an Island Paradise in The Heart of Europe. Discover breathtaking landscapes, luxury resorts, and more. Your dream getaway awaits.</p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div data-swiper-parallax="500" class="slide-btns">
+                                        <a href="#contactus" class="theme-btn">Contuct us</a> 
+                                        <!-- <a href="#" class="theme-btn-s2">Contact us</a>  -->
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="containerform">
+                                    <form class="form contacts_form" onsubmit="getbrochure(event)">
+                                        <div class="title">Download Brochure</div>
+                                        <!-- <div class="subtitle"></div> -->
+                                        <div class="input-container ic1">
+                                            <input id="contactsFirstName" class="input" type="text" placeholder=" " name="contactsFirstName" />
+                                            <div class="cut"></div>
+                                            <label for="Name" class="placeholder">Your Name</label>
+                                        </div>
+                                        <div class="input-container ic2">
+                                            <input id="Email" class="input" data-type="email" type="email" placeholder=" " name="contactsEmail" />
+                                            <div class="cut"></div>
+                                            <label for="Email" class="placeholder">Your Email</label>
+                                        </div>
+                                        <div class="input-container ic2">
+                                            <input data-type="tel" id="contactsTel" class="input" type="text" placeholder=" " name="contactsTel" />
+                                            <div class="cut cut-short"></div>
+                                            <label for="phone" class="placeholder">Your Number</label>
+                                        </div>
+                                        <button type="submit" class="submit" value="Submit">Submit</button>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+        </section>
+        <!-- end of hero slider -->
+
+        <!-- start features-section-s2 -->
+        <section class="features-section-s2">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="feature-grids clearfix">
+                            <div class="grid">
+                                <div class="img-holder">
+                                    <img src="Asset 3.png" alt>
+                                </div>
+                                <h3>01. Luxury and Exclusivity</h3>
+                                <p>Discover elite living with opulent amenities, private villas, and exquisite architecture at The Heart of Europe.
+                                </p>
+                            </div>
+                            <div class="grid">
+                                <div class="img-holder">
+                                    <img src="/www.png" alt>
+                                </div>
+                                <h3>02. Unique Experience</h3>
+                                <p>Immerse yourself in a Middle East European escape with captivating attractions like the Floating Venice and distinctive European charm.
+                                </p>
+                            </div>
+                            <div class="grid">
+                                <div class="img-holder">
+                                    <img src="/invest.png" alt>
+                                </div>
+                                <h3>03. Return on Investment</h3>
+                                <p>Invest confidently in a meticulously managed project promising both a luxurious lifestyle and strong long-term property value growth.
+                                </p>
+                            </div>
+                            <div class="grid">
+                                <div class="img-holder">
+                                    <img src="/Infrastructure.png" alt>
+                                </div>
+                                <h3>04. Amenities and Infrastructure</h3>
+                                <p>Enjoy world-class facilities, fine dining, and convenient infrastructure for a remarkable living and investment experience at The Heart of Europe.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end features-section-s2 -->
+
+        
+        <!-- start about-us-section-s2 -->
+        <section class="about-us-section-s2 section-padding p-t-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-5">
+                        <div class="img-holder about-image">
+                            <img src="/EXPO2020_SITE-640x800-1.jpg" alt>
+                        </div>
+                    </div>
+                    <div class="col col-md-7">
+                        <div class="about-details">
+                            <div class="section-title">
+                                <!-- <span>About us</span> -->
+                                <h2>Most Modern & Powerfull <span>Industry in the world</span></h2>
+                            </div>
+                            <div class="details">
+                                <p><strong>The Heart of Europe</strong> is an ambitious, cutting-edge development project located in Dubai, UAE, designed to be one of the most modern and powerful luxury real estate and hospitality industries in the world.</p>
+                                <ul>
+                                    <li><i class="ti-arrow-circle-right"></i> <strong>Cutting-Edge Technology:</strong> Smart homes and advanced infrastructure redefine modern living.                                    </li>
+                                    <li><i class="ti-arrow-circle-right"></i> <strong>Sustainable Practices: </strong> Sets an industry green standard with eco-friendly construction </li>
+                                    <li><i class="ti-arrow-circle-right"></i> <strong>Innovative Design:</strong>Redefines luxury with forward-thinking architecture.  </li>
+                                    <li><i class="ti-arrow-circle-right"></i> <strong>International Appeal:</strong>Attracts a diverse global clientele, a powerful industry player. </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end about-us-section-s2 -->
+
+
+        <!-- start services-section-s2 -->
+        <section class="services-section-s2 section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-4 col-lg-offset-4 col-sm-6 col-sm-offset-3">
+                        <div class="section-title-s4">
+                            <!-- <span>133 Units</span> -->
+                            <h2>Site Map <span>Details</span></h2>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="service-grids clearfix">
+                            <div class="grid">
+                                <div class="img-holder">
+                                    <img src="/A2732-15-firms-designing-underwater-structures-IMAGE-25 (1).jpg" alt>
+                                </div>
+                                <div class="details">
+                                    <!-- <i class="fi flaticon-solar-energy"></i> -->
+                                    <h3><a >Honeymoon</a></h3>
+                                    <p>Luxurious villas, stunning island views for honeymoons.</p>
+                                </div>
+                            </div>
+                            <div class="grid">
+                                <div class="img-holder">
+                                    <img src="/Portofino.jpg" alt>
+                                </div>
+                                <div class="details">
+                                    <!-- <i class="fi flaticon-plug"></i> -->
+                                    <h3><a >Portofino</a></h3>
+                                    <p>Mediterranean-inspired luxury resort with 466 units on the stunning coast.</p>
+                                </div>
+                            </div>
+                            <div class="grid">
+                                <div class="img-holder">
+                                    <img src="/Cote d’Azur.jpg" alt>
+                                </div>
+                                <div class="details">
+                                    <!-- <i class="fi flaticon-oil-barrel"></i> -->
+                                    <h3><a >Cote d’Azur</a></h3>
+                                    <p>Recently cut out of an illustrated magine and housed indust</p>
+                                </div>
+                            </div>
+                            <div class="grid">
+                                <div class="img-holder">
+                                    <img src="./german.jpg" alt>
+                                </div>
+                                <div class="details">
+                                    <h3><a >Germany</a></h3>
+                                    <p>Recently cut out of an illustrated magine and housed indust</p>
+                                </div>
+                            </div>
+                            <div class="grid">
+                                <div class="img-holder">
+                                    <img src="sweden.jpg" alt>
+                                </div>
+                                <div class="details">
+                                    <h3><a >Sweden</a></h3>
+                                    <p>Recently cut out of an illustrated magine and housed indust</p>
+                                </div>
+                            </div>
+                            <div class="grid">
+                                <div class="img-holder">
+                                    <img src="./swezland.jpg" alt>
+                                </div>
+                                <div class="details">
+                                    <h3><a >Switzerland</a></h3>
+                                    <p>Recently cut out of an illustrated magine and housed indust</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+
+        <section class="latest-projects-section-s2 section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-4 col-lg-offset-4 col-sm-6 col-sm-offset-3">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-area">
+                <div class="team-grids projects-slider">
+                    <div class="grid">
+                        <div class="inner">
+                            <div class="img-holder">
+                                <img src="./house.jpg" alt>
+                            </div>
+ 
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="inner">
+                            <div class="img-holder">
+                                <img src="hosue1.jpg" alt>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="inner">
+                            <div class="img-holder">
+                                <img src="house2.jpg" alt>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="inner">
+                            <div class="img-holder">
+                                <img src="./house3.jpg" alt>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="inner">
+                            <div class="img-holder">
+                                <img src="hosue4.jpg" alt>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="inner">
+                            <div class="img-holder">
+                                <img src="./house6.jpg" alt>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end latest-projects-section-s2 -->
+
+
+        <!-- start why-choose-us-section -->
+        <section class="why-choose-us-section section-padding p-t-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-6">
+                        <div class="inner-area">
+                            <div class="section-title">
+                                <span>Germany</span>
+                                <h2>Germany Island, <span></span></h2>
+                            </div>
+                            <div class="details">
+                                <p>The island comprises Bauhaus-styled villas spread along beaches or lagoons. The interiors feature a combination of minimalistic design and modern technologies. The villas are distinguished by panoramic floor-to-ceiling windows and hanged stairs. The villas have two storeys and a roof terrace. <br> <br> <strong> The average floor space is 8650 to 9180 sq. ft. Each villa has the following: </strong> <br> <br>
+                                
+                                   - 4 or 5 bedrooms <br>
+                                   - A valet room <br>
+                                   - Panoramic windows with a view of the beach and lagoon <br>
+                                   - Floating piers which connects the villa to the other islands <br>
+                                   - A picturesque pool with a Jakuzzi and a children’s pool <br>
+                                   - A terrace <br>
+                                   - An exotic garden  <br>
+                                   - A private beach with white sand <br>
+                                </p>
+ 
+                            </div>                        
+                        </div>
+                    </div>
+                    <div class="col col-md-6">
+                        <div class="img-holder">
+                            <img src="./germanyhouse.jpg" alt>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section  id="contactus" class="contact-section section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-6">
+                        <div class="left-col">
+                            <div class="img-holder">
+                                <img src="./contactus.jpg" alt>
+                                <!-- <div class="call-back">
+                                    <h3>500+</h3><span>Call we <br>Back</span>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-md-6">
+                        <div class="contact-form">
+                            <div class="section-title">
+                                <span>Contact us</span>
+                                <h2>You can contact us, <span></span></h2>
+                            </div>
+                            <form method="post" class="contact-validation-active contacts_form" id="contact-form-main" onsubmit="contuctus(event)">
+                                <div>
+                                    <input type="text" class="form-control" name="contactsFirstName" id="contactsFirstName" placeholder="Name*">
+                                </div>
+                                <div>
+                                    <input type="email" class="form-control" data-type="email" name="contactsEmail" id="contactsEmail" placeholder="Email*">
+                                </div>
+                                <div>
+                                    <input type="text" data-type="tel" class="form-control" name="contactsTel" id="contactsTel" placeholder="Phone*">
+                                </div>
+                                <div>
+                                    <select name="subject" class="form-control">
+                                        <option disabled="disabled" selected>Select Project</option>
+                                        <option>Honeymoon</option>
+                                        <option>Portofino</option>
+                                        <option>Cote d’Azur</option>
+                                        <option>Lido</option>
+                                        <option>Germany</option>
+                                        <option>Sweden</option>
+                                        <option>Switzerland</option>
+                                    </select>
+                                </div>
+                                <div class="fullwidth">
+                                    <textarea class="form-control" name="contactsMessage"  id="contactsMessage" placeholder="Case Description..."></textarea>
+                                </div>
+                                <div class="submit-area">
+                                    <button type="submit" class="submit-btn">Submit Now</button>
+                                    <div id="loader">
+                                        <i class="ti-reload"></i>
+                                    </div>
+                                </div>
+                                <div class="clearfix error-handling-messages">
+                                    <div id="success">Thank you</div>
+                                    <div id="error"> Error occurred while sending email. Please try again later. </div>
+                                </div>
+                            </form>
+                        </div>                            
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+
+        <footer class="site-footer">
+            <div class="upper-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-3 col-md-3 col-sm-6">
+                            <div class="widget about-widget">
+                                <div class="logo widget-title">
+                                    <h3>About us</h3>
+                                </div>
+                                <p>Who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to</p>
+                                <div class="social">
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/zestpropertiesdubai" target="_blank"><i class="ti-facebook"></i></a></li>
+                                        <li><a href="https://www.instagram.com/zest_properties/" target="_blank"><i class="ti-instagram "></i></a></li>
+                                        <li><a href="https://www.linkedin.com/company/zest-properties/mycompany" target="_blank"><i class="ti-linkedin"></i></a></li>
+                                        <!-- <li><a href="#"><i class="ti-pinterest"></i></a></li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col col-lg-3 col-md-3 col-sm-6">
+                            <div class="widget contact-widget service-link-widget">
+                                <div class="widget-title">
+                                    <h3>Address Location</h3>
+                                </div>
+                                <ul>
+                                    <li>Office 804, Tamani Arts, Bay Square, Business Bay, Dubai, United Arab Emirates</li>
+                                    <li>Phone:  +971 55 823 2006</li>
+                                    <li>Office Time: 9AM- 6PM</li>
+                                    <li>Email: info@zest-property.com</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-lg-3 col-md-3 col-sm-6">
+                            <div class="widget newsletter-widget">
+                                <div class="widget-title">
+                                    <h3>Newsletter</h3>
+                                </div>
+                                <p>You will be notified when somthing new will be appear.</p>
+                                <form>
+                                    <div class="input-1">
+                                        <input type="email" class="form-control" placeholder="Email Address *" required>
+                                    </div>
+                                    <div class="submit clearfix">
+                                        <button type="submit"><i class="ti-email"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end container -->
+            </div>
+            <div class="lower-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="separator"></div>
+                        <div class="col col-xs-12">
+                            <p class="copyright">Copyright &copy; 2023 Rayan J.mohammadameen . All rights reserved.</p>
+                            <div class="short-links">
+                                <ul>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end site-footer -->
+
+    </div>
+    <!-- end of page-wrapper -->
+
+
+
+    <!-- All JavaScript files
+    ================================================== -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins for this template -->
+    <script src="assets/js/jquery-plugin-collection.js"></script>
+
+    <!-- Custom script for this template -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
