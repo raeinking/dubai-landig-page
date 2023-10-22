@@ -62,23 +62,36 @@
 
 
 
-        function contuctus(event) {
-            event.preventDefault(); // Prevent the form from submitting by default
-            alert('Thank you for your form submission. We will respond to you shortly.');
-    
-            const form = document.querySelector('.contacts_form');
-            const formData = new FormData(form);
-    
-            const requestData = {};
-            for (let [key, value] of formData.entries()) {
-                requestData[key] = value;
-            }
-    
-            const xhr = new XMLHttpRequest();
-            xhr.open('POST', 'https://node-email-sendersss.glitch.me/heartofdubai');
-            xhr.setRequestHeader('Content-Type', 'application/json');
-            xhr.send(JSON.stringify(requestData));
+function contuctus(event) {
+    event.preventDefault(); // Prevent the form from submitting by default
+
+    const form = document.querySelector('.contacts_form');
+    const formData = new FormData(form);
+
+    // Check for empty fields
+    let emptyField = false;
+    formData.forEach((value) => {
+        if (!value) {
+            emptyField = true;
         }
+    });
+
+    if (emptyField) {
+        alert('Please fill in all required fields.');
+    } else {
+        alert('Thank you for your form submission. We will respond to you shortly.');
+
+        const requestData = {};
+        for (let [key, value] of formData.entries()) {
+            requestData[key] = value;
+        }
+
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://node-email-sendersss.glitch.me/heartofdubai');
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify(requestData));
+    }
+}
 
 
 
@@ -270,12 +283,12 @@
                             </div>
                             <div class="grid">
                                 <div class="img-holder">
-                                    <img src="/Cote d’Azur.jpg" alt>
+                                    <img src="./cote.jpg" alt>
                                 </div>
                                 <div class="details">
                                     <!-- <i class="fi flaticon-oil-barrel"></i> -->
                                     <h3><a >Cote d’Azur</a></h3>
-                                    <p>Recently cut out of an illustrated magine and housed indust</p>
+                                    <p>The Heart of Europe in Dubai's Côte d'Azur is a French Riviera-inspired luxury island retreat.</p>
                                 </div>
                             </div>
                             <div class="grid">
@@ -284,7 +297,7 @@
                                 </div>
                                 <div class="details">
                                     <h3><a >Germany</a></h3>
-                                    <p>Recently cut out of an illustrated magine and housed indust</p>
+                                    <p>The Heart of Europe in Dubai's Germany is a premium island getaway inspired by the rich culture and architecture of Germany.</p>
                                 </div>
                             </div>
                             <div class="grid">
@@ -293,7 +306,7 @@
                                 </div>
                                 <div class="details">
                                     <h3><a >Sweden</a></h3>
-                                    <p>Recently cut out of an illustrated magine and housed indust</p>
+                                    <p>The Heart of Europe in Dubai's Sweden is a picturesque island escape influenced by the beauty and culture of Sweden.</p>
                                 </div>
                             </div>
                             <div class="grid">
