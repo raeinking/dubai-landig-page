@@ -328,7 +328,7 @@ img {
   color: #dc2f55;
 }
 
-.submit {
+.submits {
   background-color: #08d;
   border-radius: 12px;
   border: 0;
@@ -341,9 +341,9 @@ img {
    outline: 0;
   text-align: center;
   width: 100%;
-}
+} */
 
-.submit:active {
+.submits:active {
   background-color: #06b;
 }
 
